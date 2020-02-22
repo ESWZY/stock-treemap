@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+		require.config({
+				paths: {
+					echarts: 'http://echarts.baidu.com/build/dist'
+				}
+			});
+        // 路径配置
+        require(
+            [
+                'echarts',
+                'echarts/chart/treemap' // 加载treemap模块，按需加载
+            ],
+            function(ec) {
+				var url = "http://www.z3quant.com/openapi/openjson/tx/.json?";			
+				var myChart = ec.init(document.getElementById("main"));
+				var allData;
+				
+				function drawMap(state) {
+					if (state) $("#body").css("visibility", "hidden");
+					$.ajax({
+						type: "get",
+						//dataType: "json",
+						scriptCharset: "utf-8",
+						url: url + new Date().getTime(),
+						data: "",
+						success: function(data) {
+							var reg1 = new RegExp('scale', "g");
+							data= data.replace(reg1, 'value');
+							var tempData = JSON.parse(data);
+							
+							var option = {
+								title : {
+									text: '标题测试',
+									subtext: '子标题测试'
+								},
+								tooltip : {
+									trigger: 'item'
+								},
+								animation : true,
+								series : [
+									{
+										name:'序列名称',
+										type:'treemap',
+										gapWidth: 5,
+										borderColor: '#fff',
+										itemStyle: {
+											normal: {
+												label: {
+													show: true,
+													formatter: "{b}"
+												},
+												borderWidth: 1
+											},
+											emphasis: {
+												label: {
+													show: true
+												}
+											}
+										},
+										data: tempData.children
+									}
+								],
+								color: ['#00d641', '#1aa448', '#0e6f2f', '#085421', '#424453', '#6d1414', '#961010', '#be0808', '#e41414'] //涨跌幅1日颜色
+							};
+							console.log(option);
+							myChart.setOption(option);
+												
+						},
+						error: function() {
+							console.log("request----error!")
+						}
+					});
+				}
+
+
+				$(function() {
+					var color1dArr = ['#00d641', '#1aa448', '#0e6f2f', '#085421', '#424453', '#6d1414', '#961010', '#be0808', '#e41414'], //涨跌幅1日颜色
+
+						valueRange1dArr = ['-4%', '-3%', '-2%', '-1%', '0%', '1%', '2%', '3%', '4%']; //图例1日涨跌幅数值
+					drawMap();
+					$(function() {
+						$(this).addClass('cur').siblings().removeClass('cur');
+						selectedColor = $(this).attr('data-key');
+						type = $(this).attr('data-type');
+						var index = $(this).attr('data-index');
+						$("#loadingpic").css("display","block");
+						drawMap(true);
+					})
+				});
+				
+			}
+        );
+    </script>
+</body>
