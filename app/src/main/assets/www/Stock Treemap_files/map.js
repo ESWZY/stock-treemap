@@ -80,17 +80,6 @@ function drawMap(state) {
         var zntyMapData = nodes[0];
         zntyInitMap(w, zntyMapData, selectedColor);
     }
-    function hqrepeat(){
-        var indexHq = window["indexHq"];
-        var date = (indexHq.Summary.hqtime).substr(0, 8);
-        var time = (indexHq.Summary.hqtime).substr(8);
-        date = date.substr(0, 4) + "-" + date.substr(4, 2) + "-" + date.substr(6);
-        time = time.substr(0, 2) + ":" + time.substr(2, 2) + ":" + time.substr(4, 2);
-        $("#hqTimeTxt").text("行情获取时间：" + date + " " + time);
-    }
-    //hqrepeat();
-    clearTimeout(window.timer);
-    window.timer = setTimeout(hqrepeat, 2 * 1000);
 }
 
 function getRangeLegend(colorArr, valueRangeArr) {
