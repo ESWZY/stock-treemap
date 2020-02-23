@@ -1,0 +1,158 @@
+.jrj-where {
+    padding: 5px 0 0;
+}
+
+.jrj_sb td {
+    font-size: 12px;
+}
+
+.inl .firstA {
+    margin-left: 0px;
+}
+
+.scgl_s1 .hd {
+    /* border-top: solid 2px rgb(29, 117, 180); */
+    border-top: none;
+    color: #313131;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+
+.scgl_s1 .hd i {
+    border-left: solid 3px rgb(12, 94, 150);
+}
+
+.scgl_s1 .hd span {
+    padding-left: 8px;
+    font-family: 'Î¢ÈíÑÅºÚ';
+    font: 14px bold;
+    font-weight: bold;
+}
+
+.scgl_s1 div ul li {
+    float: left;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #313131;
+    border-right: 1px solid rgb(52, 155, 227);
+}
+
+.search_ht .con_input .cint01 {
+    box-sizing: content-box;
+}
+
+.scgl_s1 .navBox li.cur {
+    background: #fff;
+    border-bottom: none;
+    font-weight: 700;
+}
+
+.navBox {
+    border-top: solid 1px #68a3cd;
+    border-left: solid 1px #68a3cd;
+}
+
+.scgl_s1 .navBox li {
+    border-bottom: solid 1px #68a3cd;
+}
+
+.floatingWindow {
+    position: absolute;
+    width: 250px;
+    padding: 5px 10px 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    top: 65px;
+    left: 365px;
+}
+
+.floatingWindow .floatingWindow_title {
+    border-bottom: 1px solid #bfbfbf;
+    margin-bottom: 5px;
+}
+
+.floatingWindow .floatingWindow_title p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.floatingWindow .floatingWindow_title p,
+.floatingWindow .floatingWindow_title span {
+    float: left;
+}
+
+.floatingWindow .floatingWindow_title span {
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.floatingWindow .floatingWindow_title span.upArrow,
+.floatingWindow .floatingWindow_title span.downArrow {
+    padding-right: 10px;
+    float: right;
+}
+
+.floatingWindow .floatingWindow_title span.upArrow {
+    background: url('//i0.jrjimg.cn/summary/watchTool/upArrow.jpg') no-repeat 90% center;
+    color: #ec2529;
+}
+
+.floatingWindow .floatingWindow_title span.downArrow {
+    background: url('//i0.jrjimg.cn/summary/watchTool/downArrow.jpg') no-repeat 90% center;
+    margin-left: 20px;
+    color: #2ecc5d;
+}
+
+.floatingWindow tr {
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.floatingWindow th {
+    color: #fff;
+    background: #ec2529;
+    border: none;
+}
+
+.floatingWindow tbody tr.odd {
+    background: #fff;
+}
+
+.floatingWindow tbody tr.even {
+    background: #eeeeee;
+}
+
+.nlpage {
+    text-align: center;
+}
+
+.nlpage span {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 3px;
+    background: #eee;
+    margin: 10px 0 0;
+}
+
+.nlpage span.active {
+    background: #1d75b4;
+    color: #fff;
+}
+
+.tips {
+    text-align: center;
+    height: 400px;
+    font-size: 20px;
+    line-height: 400px;
+    font-family: "Î¢ÈíÑÅºÚ"
+}

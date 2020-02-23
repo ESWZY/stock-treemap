@@ -1,0 +1,322 @@
+@charset "gb2312";
+/* CSS Document */
+.search_top h1 img{display:block;padding-top:20px;}
+
+.moblue .red b,.moblue .red i,.red{color:#ff0000!important;}
+.moblue .gre b,.moblue .gre i,.gre{color:#009900!important;}
+
+.stock_inf dl{background:#f6f4f5;border:solid 1px #dbdbdb;border-width:1px 0;}
+.stock_inf dl dt{float:left;width:16.6%;text-align:center;height:34px;line-height:34px;}
+.footer{margin-top:10px;}
+
+.c2-1 .col-01{width:170px;margin-right:10px;}
+.c2-1 .col-02{width:820px;}
+.n2-1 .left,.n2-1 .right{float:left;width:590px;margin-right:10px;}
+.n2-1 .right{width:220px;margin:0}
+.n2-2 .left,.n2-2 .right{float:left;width:405px;margin-right:10px;}
+.n2-2 .right{margin:0}
+.c3-1 .col-01{width:170px;margin-right:10px;}
+.c3-1 .col-02{width:590px;margin-right:10px;}
+.c3-1 .col-03{width:220px;}
+
+.moblue{border:solid 1px #b5cde5;height:278px;padding:0 10px;}
+.moblue .namestock{display:block;font-sizE:24px;font-family:"Î¢ÈíÑÅºÚ","ËÎÌå";text-align:center;color:#666;font-weight:normal;padding-top:15px;line-height:24px;padding-bottom:10px;margin-bottom:5px;border-bottom:dotted 1px #ccc;}
+.moblue .namestock i{font-size:12px;display:block;padding-top:2px;}
+.moblue .umbstock{padding-bottom:10px;margin-bottom:10px;border-bottom:dotted 1px #ccc;overflow:hidden;}
+.moblue .umbstock b,.moblue .umbstock i,.moblue .umbstock em{display:block;text-align:center;font-size:12px;font-weight:bold;font-family:"Î¢ÈíÑÅºÚ","ËÎÌå";line-height:normal;width:100%;float:left;}
+.moblue .umbstock b{font-sizE:40px;line-height:54px;}
+.moblue .umbstock em.time{color:#666;font-weight:normal;padding-top:5px;}
+.moblue .umbstock i{font-sizE:14px;}
+.moblue .umbstock em.time,.moblue .umbstock i{line-height:20px;}
+.banklist dl dt{color:#4a4f53;text-align:center;}
+.banklist dl dt a,.banklist dl dt a:visited,.banklist dl dt a:hover{color:#3777b4;}
+.banklist dl dt.stocknone{height:72px;line-height:72px;}
+.tab-s1{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/tabs1.png) no-repeat right -33px;}
+.tab-s1 dl{border-bottom:31px;border-left:solid 1px #b5cde5;}
+.tab-s1 dl dt{height:33px;line-height:33px;width:25%;float:left;font-size:14px;font-weight:bold;cursor:pointer;}
+.tab-s1 dl dt span{display:block;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/tabs1.png) no-repeat right -33px;color:#838383;text-align:center;}
+.tab-s1 dl dt.cur span{background-position:right 0;color:#4a4f53;}
+.tab-s1{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/tabs1.png) no-repeat right -33px;}
+
+.tab-s1 table{border-left:solid 1px #b5cde5;}
+.tab-s1 tr{border-bottom:31px;}
+.tab-s1 tr td{height:33px;line-height:33px;width:20%;float:left;font-size:14px;font-weight:bold;cursor:pointer;}
+.tab-s1 tr td span{display:block;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/tabs1.png) no-repeat right -33px;color:#838383;text-align:center;}
+.tab-s1 tr td.cur span{background-position:right 0;color:#4a4f53;}
+
+.s1two dl dt span{background-position:left -33px;}
+.s1two dl dt.cur{border-left:solid 1px #b5cde5;}
+.s1two dl dt.f1{border:none;}
+.crumbs{font-sizE:12px;height:40px;line-height:40px;}
+.crumbs a,.crumbs a:visited,.crumbs a:hover,.crumbs i,.crumbs span{color:#696969;}
+.crumbs i{padding:0 5px;}
+
+.inputaitg{padding-top:10px;}
+.inputaitg span,.inputaitg input{display:inline-block;vertical-align:middle;}
+.inputaitg input.topait1{border:solid 1px #3d82bd;width:288px;height:33px;padding:0 10px;color:#aaa;line-height:33px;}
+.inputaitg input.topaib1{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/btnwtg.png) no-repeat;width:91px;height:35px;cursor:pointer;border:none;border:0;}
+.inputaitg span{padding-left:10px;color:#4a4f53;}
+.inputaitg span b{color:#3777b4;font-weight:bold;padding:0 2px;}
+.contit-s1{height:201px;border:solid 1px #b5cde5;border-top:none;font-size:14px;line-height:23px;}
+.contit-s1 .posrtit{padding:8px 20px 0;}
+.contit-s1 .posrtit span{position:absolute;color:#4a4f53;}
+.contit-s1 .posrtit i{display:block;padding-left:75px;color:#838383;}
+.contit-s1 .posrtit a.more,.contit-s1 .posrtit a.more:visited,.contit-s1 .posrtit a.more:hover{float:right;color:#3778b2;}
+.contit-s1 .tit-dp{padding:13px 20px 0;line-height:24px;}
+.contit-s1 .tit-dp p a,.contit-s1 .tit-dp p a:visited,.contit-s1 .tit-dp p a:hover{color:#3778b2;}
+.contit-s1 .tit-dp p .more{float:right;}
+.contit-s1 .tit-dp p b{display:block;}
+.contit-s1 .list-gd{padding:13px 20px 0;}
+.contit-s1 .list-gd dl dt{padding-left:10px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/dian.png) no-repeat 0 11px;line-height:22px;border-bottom:dashed 1px #ccc;padding-bottom:5px;margin-bottom:5px;}
+.contit-s1 .list-gd dl dt p i.time{float:right;color:#999;}
+.contit-s1 .list-gd dl dt p a,.contit-s1 .list-gd dl dt p a:visited,.contit-s1 .list-gd dl dt p a:hover{color:#3878b2;}
+.contit-s1 .list-gd dl dt p span{padding-right:30px;color:#4a4f53;}
+.contit-s1 .list-gd dl dt.last{padding-bottom:0;margin-bottom:0;border:none}
+.contit-s1 .list-gd .more,.contit-s1 .list-gd .more:visited,.contit-s1 .list-gd .more:hover{float:right;color:#3778b2;}
+
+.addstock .hd{height:23px;line-height:23px;padding:5px 0}
+.addstock .hd a,.addstock .hd a:visited,.addstock .hd a:hover{padding-right:10px;color:#3778b2;}
+.addstock .hd a.addstock,.addstock .hd a.addstock:visited,.addstock .hd a.addstock:hover{padding:0 5px;display:inline-block;float:right;color:#fff;background:#3179b8;font-weight:normal;cursor:pointer;}
+.addstock .bd{border:solid 1px #b5cde5;}
+.addstock .bd .bdhd{display:block;height:30px;line-height:30px;font-weight:normal;text-align:center;background:#f5f5f5;}
+.addstock .bd .bdhd i{color:#3778b2;}
+
+.ocnwe_box{padding:0 19px 10px;}
+.ocnwe_box dl dt{border-bottom:dashed 1px #ccc;}
+.ocnwe_box dl dt.last{border:none;}
+.ocnwe_box .headjs{display:block;height:31px;line-height:31px;padding-lefT:15px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/aww_icon.png) no-repeat;font-weight:normal;color:#4a4f53;cursor:pointer;}
+.ocnwe_box .headjs i{padding-lefT:20px;}
+.ocnwe_box .op_hd{background-position:0 -33px;}
+.ocnwe_box dl dt .boxlast{padding-bottom:6px;}
+.ocnwe_box dl dt .boxlast span{color:#666;padding-right:10px;}
+.ocnwe_box dl dt .boxlast a,.ocnwe_box dl dt .boxlast a:visited,.ocnwe_box dl dt .boxlast a:hover{color:#3777b4;}
+
+.leftmoblue{border:solid 1px #b5cde5;}
+.tab-s2 ul{border-bottom:solid 1px #cdcdcd;}
+.tab-s2 ul li{float:left;width:50%;height:36px;line-height:33px;color:#3778b2;text-align:center;font-size:14px;font-weight:bold;cursor:pointer;}
+.tab-s2 ul li.cur{height:33px;border-bottom:solid 3px #3778b2;color:#4a4f53;}
+.tab-s2 ul li.cur1{height:33px;border-bottom:solid 3px #3778b2;color:#4a4f53;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/aww_icon.png) no-repeat 3px 0;padding:0 0 0 15px;width:auto}
+.tab-s2 ul li.mh-option{float:right;font-sizE:14px;width:auto;padding-right:10px;font-weight:normal;cursor:default;}
+.tab-s2 ul li.mh-option a,.tab-s2 ul li.mh-option a:visited,.tab-s2 ul li.mh-option a:hover{color:#3778b2;}
+.tab-s2 ul li.mh-option i{font-family:"ËÎÌå"}
+.tab-s2 ul li.mh-option span{color:#999;padding-right:30px;font-size:12px;}
+.tab-s2 ul li.mh-sub{font-size:12px;padding-lefT;20px;color:#999;padding-left:30px;font-weight:normal;cursor:default;}
+.table-tit-1{padding:10px 0 10px 8px;}
+.table-tit-1 p{line-height:27px;}
+.table-tit-1 p span{color:#4a4f53;}
+.table-tit-1 p span,.table-tit-1 p a,.table-tit-1 p input{display:inline-block;vertical-align:middle;}
+.table-tit-1 p a,.table-tit-1 p a:visited,.table-tit-1 p a:hover{color:#3777b4;}
+.table-tit-1 p a,.table-tit-1 p span{width:26%;display:inline-block;}
+.table-tit-1 p a,.table-tit-1 p span.w1{width:32%;}
+.table-tit-1 p.tit{text-align:center;}
+.table-tit-1 p input{width:14px;height:14px;border:none;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/bg.png) no-repeat;cursor:pointer;margin-left:3px;}
+.table-tit-1 p.pr{text-align:right;padding-right:8px;}
+
+.oc_main{padding:10px 15px}
+.oc_main dl dt{font-sizE:14px;}
+.oc_main dl dt b,.oc_main dl dt .hsbox{padding-left:20px;}
+.oc_main dl dt b,.oc_main dl dt b a{color:#4a4f53;}
+.oc_main dl dt.tito b{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/op_o.png) no-repeat 0 2px;}
+.oc_main dl dt.titc b{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/op_h.png) no-repeat 0 2px;}
+.oc_main dl dt.tito b,.oc_main dl dt.titc b{cursor:pointer;}
+.oc_main dl dt .hsbox a,.oc_main dl dt .hsbox a:visited{color:#838383;}
+.oc_main dl dt .hsbox a:hover{color:#3778b2;font-weight:bold;}
+.oc_main dl dt .hsbox p{line-height:25px;}
+.gg_box{padding:4px 8px;}
+.gg_box p b{padding-left:10px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/dian.png) no-repeat 0 5px;}
+.gg_box .tits{padding-left:10px;}
+
+.ts_one{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/tabs1.png) no-repeat right -33px}
+.ts_one dl dt{width:50%}
+.mdblue .bd{border:solid 1px #b5cde5;border-width:0 1px 1px;}
+.pone{padding:10px 0 10px 20px;}
+.pone p span{color:#4a4f53;}
+.pone p span,.pone p b{width:33%;display:inline-block;}
+.pone p.bthd span,.pone p.bthd b{width:45%;}
+.pone p.bthd span{border-bottom:solid 1px #ececec;}
+.infor{height:auto;padding:5px}
+.infor p span{display:inline-block;width:50%;height:24px;overflow:hidden;}
+.infor p span i{padding-left:5px;}
+.infor p.line{margin-top:4px;padding-top:5px;border-top:dashed 1px #999;}
+.infor p.line span i{padding-left:0}
+.bluebd{border:solid 1px #b5cde5;border-width:0 1px 1px;padding:5px 0;height:177px;*padding-bottom:0;*height:160px}
+.bluebd .pr{text-align:right;padding-right:10px;}
+.bluebd .pr a,.bluebd .pr a:visited,.bluebd .pr a:hover{color:#3777b4;}
+.bluebd .pr a i{font-family:"ËÎÌå"}
+.table-s1 tr td{padding-left:15px;height:21px;line-height:21px;}
+.picone{border:solid 1px #b5cde5;border-left:solid 2px #3d83be;}
+.picone table tr td{height:282px;text-align:center;}
+.picone table tr td.hdbt{background:#f9fafc;width:48px;text-align:center;font-size:14px;font-weight:bold;}
+.picone table tr td.hdbt span{display:block;padding:0 12px;}
+.picone table tr td.line{width:3px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/liney.png) no-repeat 0 center;}
+.flashone{width:590px;height:550px;overflow:hidden;}
+
+.c2-2 .col-01,.c2-2 .col-02{width:417px;margin-right:10px;}
+.c2-2 .col-02{margin:0}
+.s2tab ul li{width:auto;padding:0 10px;}
+.list-s1{padding:10px;}
+.list-s1 dt{padding-left:10px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/dian.png) no-repeat 0 12px;height:25px;line-height:25px;font-size:14px;}
+.list-s1 dt a,.list-s1 dl dt a:visited,.list-s1 dt a:hover{color:#4a4f53;}
+.list-s1 dt i{float:right;color:#999;}
+.list-s1 dt span{float:right;padding-right:20px;}
+
+.table-s2 tr th{padding:10px 0;text-align:center;line-height:16px;color:#4a4f53;}
+.table-s2 tr td{text-align:center;height:26px;color:#4a4f53;}
+.table-s2 tr.cur td{background:#f9fafc}
+.table-s2 tr .tl{text-align:left;padding-left:10px;}
+.table-s2 tr .tr{text-align:left;padding-right:10px;}
+
+.pictwo{padding:10px 0 0 20px;}
+.pictwo p{padding-bottom:10px;font-size:12px;line-height:26px;}
+.tab-s3{padding:3px 0 3px 3px;background:#f9fafc;float:left;margin:10px 0 0 10px;}
+.tab-s3 span{display:inline-block;padding:0 10px;margin-right:3px;height:20px;cursor:pointer;line-height:20px;background:#e3e8f7;color:#3777b4;}
+.tab-s3 span.cur{background:#b1c2e3;color:#fff;}
+
+.n2-3 .left,.n2-3 .right{float:left;width:400px;margin-right:20px;}
+.n2-3 .right{margin:0;}
+.ts_three dl dt span{width:auto;padding:0 10px;}
+
+.mos .hd{display:block;height:23px;line-height:22px;overflow:hidden;}
+.mos .hd .mh-title{border-bottom:solid 1px #3778b2;float:left;padding:0 5px;font-weight:bold;font-sizE:14px;}
+.fltwo p{font-sizE:12px;padding:5px 0 0;}
+.fltwo .flashtwo{padding-top:40px;}
+
+.table-s3 td{text-align:center;color:#4a4f53;height:27px;}
+.table-s3 tr.cur td{background:#f9fafc;}
+
+.plmo{padding-top:10px;}
+.plmo .login{margin-top:-27px;}
+.postit p{padding-bottom:5px;}
+.postit p b,.postit p span{display:block;}
+.postit p b{width:60px;position:absolute;}
+.postit p span{padding-left:60px;}
+
+.textareabtn{line-height:26px;}
+.textareabtn input{border:none;border:0}
+.textareabtn input,.textareabtn span{display:inline-block;vertical-align:middle;}
+
+.loadingbox{text-align:center;padding:60px 0 40px;}
+.loadingbox span{padding-left:40px;background:url(//i0.jrjimg.cn/common/loading.gif) no-repeat -32px center;height:24px;line-height:24px;display:inline-block;}
+
+.jltu{line-height:17px;padding:6px 10px}
+.jltu li{padding:0;height:17px;overflow:hidden;padding-top:5px;}
+.jltu li span{float:left;display:inline-block;line-height:17px;}
+.jltu li i{margin:0 5px;}
+.jltu li i em{display:inline-block;height:17px;}
+.jltu .out{background:#008000;}
+.jltu .in{background:#f00;}
+.jltu li span,.jltu li i,.jltu li em{display:inline-block;vertical-align:middle;float:left;}
+
+.iword,.ipdf{display:inline-block;vertical-align:middle;width:16px;height:16px;overflow:hidden;margin-lefT:5px;}
+.iword{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/icon_word.png) no-repeat 0 0;} 
+.ipdf{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/icon_pdf.png) no-repeat 0 0;} 
+
+
+.posr{position:relative;}
+.posr .linkmoreposa,.posr .linkmoreposa:visited,.posr .linkmoreposa:hover{position:absolute;top:-37px;right:0;display:inline-block;height:37px;line-height:37px;color:#3778b2;}
+.posr .linkmoreposa i{font-family:"ËÎÌå"}
+
+.infor p span{padding-right:5%;width:45%;}
+.infor p span i{float:right;}
+
+.pone p span.tr{padding-right:5px;text-align:right;}
+.pone{padding:10px 20px}
+.pone p span, .pone p b{text-align:right;}
+.pone p.bthd span{width:49%;}
+.pone p.bthd i{padding-lefT:5px;}
+.pone p span{width:15%;}
+.pone p span.gre,.pone p span.red,.pone p span.tr{width:42%;padding:0}
+
+.stock_inf dl dt i{padding-left:10px;}
+
+.mdblue .pone,.infor{padding:3px 20px}
+.mdblue .pone p{height:20px;line-height:20px;}
+.mdblue .pone,.infor{padding:3px 10px}
+.infor p span{height:22px;line-height:22px;width:45%;padding-right:10%}
+.infor p span.last{padding:0}
+
+.table-s1 tr td{height:24px;line-height:24px;}
+
+.table-tit-1 p span.red,.table-tit-1 p span.gre,.table-tit-1 p span.tr{text-align:right;padding-right:1%;width:27%}
+
+.table-s1 tr td.jrj-tr{padding-right:10px;text-align:right;}
+.table-s1 tr td.jrj-tl{padding-left:10px;text-align:left;}
+
+.addstockhd{height:23px;line-height:23px;padding:8px 0 0;float:right;width:230px;}
+.addstockhd a,.addstockhd a:visited,.addstockhd a:hover{padding-right:10px;color:#3778b2;}
+.addstockhd a.addstock,.addstockhd a.addstock:visited,.addstockhd a.addstock:hover{padding:0 5px;display:inline-block;float:right;color:#fff;background:#3179b8;font-weight:normal;cursor:pointer;}
+.ocnwe_box .headjs{height:33px;line-height:33px;}
+.ocnwe_box dl dt .boxlast p{height:32px;line-height:32px;}
+.addstock .bd .bdhd{height:31px;line-height:31px;}
+.crumbs .addstockhd a,.crumbs .addstockhd a:visited,.crumbs .addstockhd a:hover{color:#000;font-weight:normal;}
+.crumbs .addstockhd a.addstock,.crumbs .addstockhd a.addstock:visited,.crumbs .addstockhd a.addstock:hover{color:#fff;}
+.ocnwe_box .op_hd{background-position:0 -30px;}
+
+.ocnwe_box dl dt .boxlast span.red,.ocnwe_box dl dt .boxlast span.gre,.ocnwe_box dl dt .boxlast span.tr{text-align:right;}
+.ocnwe_box dl dt .boxlast span{width:30%;padding-right:3%;display:inline-block;}
+.ocnwe_box .headjs a,.ocnwe_box .headjs i{display:inline-block;width:60%;}
+.ocnwe_box .headjs i{text-align:right;width:36%;padding:0}
+
+
+.crumbs .addstockhd a.addok,.crumbs .addstockhd a.addok:visited,.crumbs .addstockhd a.addok:hover{background:#CCC;color:#fff;cursor:default;text-decoration:none;}
+.inputaitg p{height:35px;line-height:35px;text-align:left;padding:0 20px;;font-sizE:14px;font-family:"Î¢ÈíÑÅºÚ";background:#f1f1f1;}
+.inputaitg p a.linkstock,.inputaitg p a.linkstock:visited,.inputaitg p a.linkstock:hover{color:#3777b4;}
+.inputaitg p a.linkgs,.inputaitg p a.linkgs:visited,.inputaitg p a.linkgs:hover{color:#cc0000;}
+.inputaitg p b{color:#3777b4;}
+
+.fhtop{width:50px;height:50px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/fhtop.png) no-repeat;position:fixed;bottom:10px;left:50%;margin-left:510px;display:block;_display:none;cursor:pointer;}
+
+
+.flashone,.flashtwo{overflow:hidden;}
+.flashone{height:568px;}
+.flashtwo{height:213px;}
+.flashthree img{display:block;margin:0 auto;}
+
+.table-s2 .more_newbt{position:absolute;width:180px;padding-right:10px;text-align:right;right:0;top:-32px;height:32px;line-height:32px;}
+.table-s2 .more_newbt span,.mh-nn span{color:#999;padding-right:10px;}
+.table-s2 .more_newbt a,.table-s2 .more_newbt a:visited,.table-s2 .more_newbt a:hover,.mh-nn a,.mh-nn a:visited,.mh-nn a:hover{color:#3778b2}
+
+
+.contit-s1 .posrtit i,.contit-s1 .posrtit span,.tit-dp p,.contit-s1 .list-gd dl dt p span{color:#4a4f53;}
+.table-tit-1 p{height:27px;overflow:hidden;}
+
+
+
+.fc_box{border:solid 1px #b5cde5;background:#eff7ff;padding:47px 0 37px;position:fixed;top:30%;left:50%;margin-left:-295px;width:588px;_position:absolute;}
+.fc_box .titfc,.fc_box .fcbtn,.fc_box .clearfc{padding-left:140px;}
+.fc_box .titfc{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/ok.jpg) no-repeat 70px 0}
+.fc_box .titfc b,.fc_box .clearfc b{font-family:"Î¢ÈíÑÅºÚ","ËÎÌå";font-sizE:21px;display:block;padding-bottom:10px;font-weight:normal;}
+.fc_box .titfc p,.fc_box .clearfc p{font-sizE:16px;font-family:"Î¢ÈíÑÅºÚ","ËÎÌå";color:#666;}
+.fc_box .clearfc{background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/icon_clear.png) no-repeat 70px 0}
+.fc_box .fcbtn{padding-top:18px;}
+.fc_box .fcbtn span,.fc_box .clearfc span{height:38px;line-height:38px;width:120px;border:solid 1px #009966;display:inline-block;text-align:center;margin-right:20px;cursor:pointer;background:#0068b7;font-size:14px;color:#fff;border:solid 1px #b5cde5;font-family:"Î¢ÈíÑÅºÚ","ËÎÌå";font-sizE:16px;}
+.tab-s1 tr td span{position:relative}
+.tab-s1 tr td span b.n_icon{width:25px;height:14px;background:url(//i0.jrjimg.cn/stock/ge_stock_v2015/new_bt.png) no-repeat;overflow:hidden;right:0px;top:-5px;position:absolute;display:block;}
+.tab-s1 tr td span{*zoom:1}
+
+.posrtit_new p{position:relative;}
+.posrtit_new p .time{right:0;bottom:0;*bottom:1px;position:absolute;color:#999;}
+.posrtit p a,.posrtit p a:visited,.posrtit p a:hover{color:#4a4f53;}
+
+.search_top h1 img{padding-top:0}
+.ts_one dl dt{width:49.5%\9}
+
+.motsone .namestock{padding:45px 0 25px;}
+.motsone  .umbstock{border:none;padding-top:20px;}
+
+/*  seoÐÞ¸Ä   */
+.logo{
+    width:200px;
+    height: 80px;
+    float: left;
+}
+.logo span{
+    display: block;
+    line-height: 80px;
+    padding-lefT: 15px;
+    font-size: 20px;
+    font-family: "Î¢ÈíÑÅºÚ","ËÎÌå";
+    font-weight: bold;
+    color: #666;
+    float: right;
+}

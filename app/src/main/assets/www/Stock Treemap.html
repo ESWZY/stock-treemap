@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <title>Stock Treemap</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="大盘云图、股票、行情、指数、A股、流通市值、涨幅、跌幅、实时涨跌幅、近一周涨跌幅、近一月涨跌幅、近一年涨跌幅、市盈率、行业、领涨行业、领跌行业、概念股">
+    <meta name="description" content="大盘云图是一种智能股票盯盘工具，通过图析的方式呈现全市场的实时动态，用颜色的深浅标注个股的异动情况，能够使投资者更清晰的感知市场的脉搏，更加贴近市场，让您的投资之路更简单、更智能。">
+    <script src="./Stock Treemap_files/jquery-1.7.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./Stock Treemap_files/style.css">
+    <link rel="stylesheet" href="./Stock Treemap_files/css.css">
+    <link rel="stylesheet" href="./Stock Treemap_files/index.css">
+    <link type="text/css" rel="stylesheet" href="./Stock Treemap_files/mapCss.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            var a01 = $('.stock_inf').offset();
+            var nyz = a01.top;
+            setTimeout(function() {
+                $('html,body').scrollTop(nyz);
+            }, 0);
+        };
+    </script>
+</head>
+
+
+<!----------------------------头部结束---------------------------->
+<div class="main mt">
+
+    <!--大盘云图开始-->
+    <div class="scgl_s1 mt">
+        <div class="navBox" style="text-align: center;width: '100%';height: 30px;background-color: #f1f1f1">
+            <ul>
+                <li data-index="0" class="cur" data-type="mkt_idx.cur_chng_pct" data-key="">实时涨跌幅</li>
+                <li data-index="1" data-key="" data-type="mkt_idx.chng_pct_week">近一周涨跌幅</li>
+                <li data-index="2" data-key="" data-type="perf_idx.chng_pct_month">近一月涨跌幅</li>
+                <li data-index="3" data-key="" data-type="perf_idx.chng_pct_year">近一年涨跌幅</li>
+                <li data-index="4" data-key="_pe" data-type="mkt_idx.pe_ttm" style="border-right: 0 solid rgb(52, 155, 227)">市盈率</li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="content map">
+        <div class="container">
+            <div class="content-view-map">
+                <div id="map" style="width: 100%;">
+                    <img id="loadingpic" style="position: relative; left: 440px; top: 490px; display: none;" src="./Stock Treemap_files/loading1.gif">
+					
+                    <div id="body" style="height: 600px; width: '100%'; visibility: visible;">
+					  <div data-reactid=".0">
+						<div data-reactid=".0.0">
+						  <canvas class="chart" width="1000" height="900" data-reactid=".0.0.0"></canvas>
+						  <canvas class="hover-canvas" width="1000" height="900" data-reactid=".0.0.1" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></canvas>
+						</div>
+						<div style="position: absolute; top: 900px; left: 13px; width: 1000px;" data-reactid=".0.1">
+						  <table width="100%" data-reactid=".0.1.0">
+							<tbody data-reactid=".0.1.0.0">
+							  <tr data-reactid=".0.1.0.0.0">
+								<td class="info" width="100%" style="display:none;" data-reactid=".0.1.0.0.0.0">
+								  <span data-reactid=".0.1.0.0.0.0.0">娓╅Θ鎻愮ず锛氶紶鏍囩Щ鍔ㄥ埌鏌愪竴鍖哄煙鏃讹紝娴獥鏄剧ず姝よ涓氱殑鑲＄エ鍒楄〃鍜屽綋鍓嶄环鏍硷紱</span>
+								  <br data-reactid=".0.1.0.0.0.0.1">
+								  <span data-reactid=".0.1.0.0.0.0.2">閫氳繃鍗曞嚮榧犳爣鍙互瀵规煇锟&#65533;?涓尯鍩熻繘琛屾斁澶у拰缂╁皬锛屽弻鍑婚紶鏍囧彲浠ヨ繘鍏ヤ釜鑲￠〉闈拷??</span>
+								</td>
+								<td class="scale" width="549" style="float:left;margin-right:0;display:none;" data-reactid=".0.1.0.0.0.1">
+								  <div class="step" style="background:#30cc5a;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$-4">-4%</div>
+								  <div class="step" style="background:#2faa51;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$-3">-3%</div>
+								  <div class="step" style="background:#31894e;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$-2">-2%</div>
+								  <div class="step" style="background:#38694f;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$-1">-1%</div>
+								  <div class="step" style="background:#414554;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$0">0%</div>
+								  <div class="step" style="background:#784551;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$1">+1%</div>
+								  <div class="step" style="background:#a5424a;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$2">+2%</div>
+								  <div class="step" style="background:#ce3d41;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$3">+3%</div>
+								  <div class="step" style="background:#f63538;width:60px;padding-left:0;padding-right:0;" data-reactid=".0.1.0.0.0.1.$4">+4%</div>
+								</td>
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+					  </div>
+					</div>
+					
+					<div id="legend"></div>
+                    <div id="hover-wrapper"><noscript data-reactid=".1"></noscript></div>
+                </div>
+                <div id="modal"></div>
+                <div class="map_bt clearfix map_bt_min">
+                    <div class="map_scale map_scale_min" style="">
+						<img src="./Stock Treemap_files/you.png" alt="" id="legend-close" class="legend-switch">
+						<img src="./Stock Treemap_files/zuo.png" alt="" id="legend-open" class="legend-switch">
+						<div class="step" style="background:#00d641;">-4%</div>
+						<div class="step" style="background:#1aa448;">-3%</div>
+						<div class="step" style="background:#0e6f2f;">-2%</div>
+						<div class="step" style="background:#085421;">-1%</div>
+						<div class="step" style="background:#424453;">0%</div>
+						<div class="step" style="background:#6d1414;">1%</div>
+						<div class="step" style="background:#961010;">2%</div>
+						<div class="step" style="background:#be0808;">3%</div>
+						<div class="step" style="background:#e41414;">4%</div>
+					</div>
+					<p class="zn_tip zn_tip_min" style="width: 990px;">提示：移动到某一区域时，浮窗显示此行业股票列表和价格；滑动可以对某一个区域进行放大和缩小。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./Stock Treemap_files/react-with-addons.min.js"></script>
+<script type="text/javascript" src="./Stock Treemap_files/d3.js"></script>
+<script type="text/javascript" src="./Stock Treemap_files/hammer.min.js"></script>
+<script type="text/javascript" src="./Stock Treemap_files/bundle.js"></script>
+<script type="text/javascript" src="./Stock Treemap_files/map.js" charset="GB2312"></script>
+<script>
+    var e = document.createElement("canvas");
+    var state=!(!e.getContext || !e.getContext("2d"));
+    if (!state) {
+        $('.map').html('<div class="tips">您的浏览器不支持H5，请升级浏览器后访问</div>');
+    }
+</script>
+
+
+</body></html>

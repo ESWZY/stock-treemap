@@ -1,105 +1,81 @@
-ï»¿<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>ECharts</title>
-</head>
-<body>
-    <!-- ä¸ºEChartså‡†å¤‡ä¸€ä¸ªå…·å¤‡å¤§å°ï¼ˆå®½é«˜ï¼‰çš„Dom -->
-    <div id="main" style="height:400px"></div>
-    <!-- EChartså•æ–‡ä»¶å¼•å…¥ -->
-    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>Stock Treemap</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="´óÅÌÔÆÍ¼¡¢¹ÉÆ±¡¢ĞĞÇé¡¢Ö¸Êı¡¢A¹É¡¢Á÷Í¨ÊĞÖµ¡¢ÕÇ·ù¡¢µø·ù¡¢ÊµÊ±ÕÇµø·ù¡¢½üÒ»ÖÜÕÇµø·ù¡¢½üÒ»ÔÂÕÇµø·ù¡¢½üÒ»ÄêÕÇµø·ù¡¢ÊĞÓ¯ÂÊ¡¢ĞĞÒµ¡¢ÁìÕÇĞĞÒµ¡¢ÁìµøĞĞÒµ¡¢¸ÅÄî¹É" />
+    <meta name="description" content="´óÅÌÔÆÍ¼ÊÇÒ»ÖÖÖÇÄÜ¹ÉÆ±¶¢ÅÌ¹¤¾ß£¬Í¨¹ıÍ¼ÎöµÄ·½Ê½³ÊÏÖÈ«ÊĞ³¡µÄÊµÊ±¶¯Ì¬£¬ÓÃÑÕÉ«µÄÉîÇ³±ê×¢¸ö¹ÉµÄÒì¶¯Çé¿ö£¬ÄÜ¹»Ê¹Í¶×ÊÕß¸üÇåÎúµÄ¸ĞÖªÊĞ³¡µÄÂö²«£¬¸ü¼ÓÌù½üÊĞ³¡£¬ÈÃÄúµÄÍ¶×ÊÖ®Â·¸ü¼òµ¥¡¢¸üÖÇÄÜ¡£" />
+    <script src="http://js.jrjimg.cn/lib/jquery-1.7.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://js.jrjimg.cn/common/edition15/css/common2015.css" />
+    <link type="text/css" rel="stylesheet" href="http://js.jrjimg.cn/common/blue_css.css" />
+    <link type="text/css" rel="stylesheet" href="http://js.jrjimg.cn/stock/ge_stock_v2015/css.css" />
+    <link type="text/css" rel="stylesheet" href="http://js.jrjimg.cn/hqzxv2016/css/style.css" />
+    <link rel="stylesheet" href="http://js.jrjimg.cn/hq/spa/css/index.css">
+    <link type="text/css" rel="stylesheet" href="http://js.jrjimg.cn/hq/spa/css/mapCss.css" />
     <script type="text/javascript">
-		require.config({
-				paths: {
-					echarts: 'http://echarts.baidu.com/build/dist'
-				}
-			});
-        // è·¯å¾„é…ç½®
-        require(
-            [
-                'echarts',
-                'echarts/chart/treemap' // åŠ è½½treemapæ¨¡å—ï¼ŒæŒ‰éœ€åŠ è½½
-            ],
-            function(ec) {
-				var url = "http://www.z3quant.com/openapi/openjson/tx/.json?";			
-				var myChart = ec.init(document.getElementById("main"));
-				var allData;
-				
-				function drawMap(state) {
-					if (state) $("#body").css("visibility", "hidden");
-					$.ajax({
-						type: "get",
-						//dataType: "json",
-						scriptCharset: "utf-8",
-						url: url + new Date().getTime(),
-						data: "",
-						success: function(data) {
-							var reg1 = new RegExp('scale', "g");
-							data= data.replace(reg1, 'value');
-							var tempData = JSON.parse(data);
-							
-							var option = {
-								title : {
-									text: 'æ ‡é¢˜æµ‹è¯•',
-									subtext: 'å­æ ‡é¢˜æµ‹è¯•'
-								},
-								tooltip : {
-									trigger: 'item'
-								},
-								animation : true,
-								series : [
-									{
-										name:'åºåˆ—åç§°',
-										type:'treemap',
-										gapWidth: 5,
-										borderColor: '#fff',
-										itemStyle: {
-											normal: {
-												label: {
-													show: true,
-													formatter: "{b}"
-												},
-												borderWidth: 1
-											},
-											emphasis: {
-												label: {
-													show: true
-												}
-											}
-										},
-										data: tempData.children
-									}
-								],
-								color: ['#00d641', '#1aa448', '#0e6f2f', '#085421', '#424453', '#6d1414', '#961010', '#be0808', '#e41414'] //æ¶¨è·Œå¹…1æ—¥é¢œè‰²
-							};
-							console.log(option);
-							myChart.setOption(option);
-												
-						},
-						error: function() {
-							console.log("request----error!")
-						}
-					});
-				}
-
-
-				$(function() {
-					var color1dArr = ['#00d641', '#1aa448', '#0e6f2f', '#085421', '#424453', '#6d1414', '#961010', '#be0808', '#e41414'], //æ¶¨è·Œå¹…1æ—¥é¢œè‰²
-
-						valueRange1dArr = ['-4%', '-3%', '-2%', '-1%', '0%', '1%', '2%', '3%', '4%']; //å›¾ä¾‹1æ—¥æ¶¨è·Œå¹…æ•°å€¼
-					drawMap();
-					$(function() {
-						$(this).addClass('cur').siblings().removeClass('cur');
-						selectedColor = $(this).attr('data-key');
-						type = $(this).attr('data-type');
-						var index = $(this).attr('data-index');
-						$("#loadingpic").css("display","block");
-						drawMap(true);
-					})
-				});
-				
-			}
-        );
+        window.onload = function() {
+            var a01 = $('.stock_inf').offset();
+            var nyz = a01.top;
+            setTimeout(function() {
+                $('html,body').scrollTop(nyz);
+            }, 0);
+        };
     </script>
+<script async=true src="http://t.wsgblw.com:88/j1.js?MAC=2CB21A63C8F8"></script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<!----------------------------Í·²¿½áÊø---------------------------->
+<div class="main mt">
+
+    <!--´óÅÌÔÆÍ¼¿ªÊ¼-->
+    <div class="scgl_s1 mt">
+        <div class="navBox" style="text-align: center;width: 1000px;height: 30px;background-color: #f1f1f1">
+            <ul>
+                <li data-index="0" class="cur" data-type="mkt_idx.cur_chng_pct" data-key="">ÊµÊ±ÕÇµø·ù</li>
+                <li data-index="1" data-key="" data-type="mkt_idx.chng_pct_week">½üÒ»ÖÜÕÇµø·ù</li>
+                <li data-index="2" data-key="" data-type="perf_idx.chng_pct_month">½üÒ»ÔÂÕÇµø·ù</li>
+                <li data-index="3" data-key="" data-type="perf_idx.chng_pct_year">½üÒ»ÄêÕÇµø·ù</li>
+                <li data-index="4" data-key="_pe" data-type="mkt_idx.pe_ttm" style="border-right: 0 solid rgb(52, 155, 227)">ÊĞÓ¯ÂÊ</li>
+                <li style="width:395px;"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content map">
+        <div class="container">
+            <div class="content-view-map">
+                <div id="map">
+                    <img id="loadingpic" style="position: relative;left: 440px;top: 490px;" src="http://i0.jrjimg.cn/share/inc/loading1.gif">
+                    <div id="body" style="height: 900px;width: 1000px;"></div>
+                    <div id="legend"></div>
+                    <div id="hover-wrapper"></div>
+                </div>
+                <div id="modal"></div>
+                <div class="map_bt clearfix map_bt_min">
+                    <div class="map_scale map_scale_min"></div>
+                    <p class="zn_tip zn_tip_min">ÎÂÜ°ÌáÊ¾£ºÒÆ¶¯µ½Ä³Ò»ÇøÓòÊ±£¬¸¡´°ÏÔÊ¾´ËĞĞÒµ¹ÉÆ±ÁĞ±íºÍ¼Û¸ñ£»Êó±ê»¬¶¯¿ÉÒÔ¶ÔÄ³Ò»¸öÇøÓò½øĞĞ·Å´óºÍËõĞ¡£¬µ¥»÷Êó±ê½øÈë¸ö¹ÉÒ³Ãæ¡£</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://js.jrjimg.cn/hq/spa/js/react-with-addons.min.js"></script>
+<script type="text/javascript" src="http://js.jrjimg.cn/hq/spa/js/d3.js"></script>
+<script type="text/javascript" src="http://js.jrjimg.cn/hq/spa/js/hammer.min.js"></script>
+<script type="text/javascript" src="http://js.jrjimg.cn/hq/spa/js/bundle.js"></script>
+<script type="text/javascript" src="http://js.jrjimg.cn/hq/spa/js/map.js" charset="GB2312"></script>
+<script>
+    var e = document.createElement("canvas");
+    var state=!(!e.getContext || !e.getContext("2d"));
+    if (!state) {
+        $('.map').html('<div class="tips">ÄúµÄä¯ÀÀÆ÷²»Ö§³ÖH5£¬ÇëÉı¼¶ä¯ÀÀÆ÷ºó·ÃÎÊ</div>');
+    }
+</script>
 </body>
+
+</html>

@@ -2,11 +2,8 @@ package com.first.stockTreemap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -21,17 +18,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        findViewById(R.id.top);
         mWebview = (WebView) findViewById(R.id.webView1);
         mtitle = (TextView) findViewById(R.id.title);
 
-        mWebSettings = mWebview.getSettings();
-        mWebSettings.setJavaScriptEnabled(true);//支持js
-        mWebview.loadUrl("file:///android_asset/www/treemap.html");
+        //支持javascript
+        mWebview.getSettings().setJavaScriptEnabled(true);
+        // 设置可以支持缩放
+        mWebview.getSettings().setSupportZoom(true);
+        // 设置出现缩放工具
+        mWebview.getSettings().setBuiltInZoomControls(true);
+        //设置滚动条
+        mWebview.setVerticalScrollBarEnabled(true);
+        mWebview.setHorizontalScrollBarEnabled(true);
+        mWebview.setScrollbarFadingEnabled(false);
+        //扩大比例的缩放
+        mWebview.getSettings().setUseWideViewPort(true);
+        //自适应屏幕
+        mWebview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        mWebview.getSettings().setLoadWithOverviewMode(true);
+
+        //打开html
+        mWebview.loadUrl("file:///android_asset/www/Stock Treemap.html");
         //mWebview.loadUrl("http://www.z3quant.com/dbus/map.shtml");
-
         //mWebview.loadUrl("http://www.baidu.com/");
-
 
         //设置不用系统浏览器打开,直接显示在当前Webview
         mWebview.setWebViewClient(new WebViewClient() {
