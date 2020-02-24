@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Treemap</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta name="viewport" content="width=1024"><meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Refresh" content="3600">
+<!-- <link th:href="@{///fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css"> -->
+<link rel="stylesheet" href="./Chinese Stock Treemap_files/base.css" />
+<link rel="stylesheet" href="./Chinese Stock Treemap_files/common.css" />
+<link rel="stylesheet" href="./Chinese Stock Treemap_files/map.css" />
+<link rel="stylesheet" href="./Chinese Stock Treemap_files/znty.css" type="text/css">
+<!--<link rel="icon" type="image/png" th:href="@{/favicon_2x.png}" sizes="32x32">-->
+<!--<link rel="icon" type="image/png" th:href="@{/favicon.png}" sizes="16x16">-->
+<style type="text/css">
+#tb_header{display: none;}
+.content{width: 100%;}
+/* .container.is-wide{width:1915px}*/
+.content.map .view{padding-left: 0;height: 60px;background:#383b44;padding: 7px 0 13px 0;}
+.content.map .view .view-select{width: 387px;border-right:none;margin-left: 16px;}
+.content.map .view .map_nav_a{font-size: 16px;line-height: 45px;display: inline-block;width: 112px;height: 45px;text-align: center;padding:0;color: #fefefe;background: #535663;border-radius: 3px;}
+.content.map .view .map_nav_a.is-active{font-weight: 400;background: #ee5752;}
+.pull-right{display: none;}
+</style>
+<script type="text/javascript">FinvizSettings = {hasUserPremium: false, name: ""};</script>
+
+</head>
+<body class="has-map" style="margin:0" bgcolor="#ffffff">
+
+<div class="content map">
+<div class="narrow">
+<span class="currentTime"></span>
+<a id="narrow"><img src="./Chinese Stock Treemap_files/narrow.png"/></a>
+</div>
+<div class="container is-wide"  >
+    <div class="view">
+        <div class="pull-left view-select">
+           <!--  <h2>View</h2> -->
+            <a href="Chinese Stock Treemap.html" class="is-active map_nav_a">
+            <span class="icon nav_span"></span>刷新</a>
+		</div>
+        <div class="zoom pull-right"></div>
+        <div class="fr enlarge">
+            <span class="currentTime"></span>
+            <a id="enlage"><img src="./Chinese Stock Treemap_files/enlarge.png"/></a>
+        </div>
+    </div>
+    <div class="map-scan">
+        <div class="sidebar sidebar2">
+            <div class="">
+                <ul class="left_nav">
+                    <li class="active"><a>全部A股</a></li>
+                    <li><a>上证A股</a></li>
+                    <li><a>深证A股</a></li>
+                    <li><a>上交所主板</a></li>
+                    <li><a>深交所主板</a></li>
+                    <li><a>中小板</a></li>
+                    <li><a>创业板</a></li>
+                </ul>
+                <select id="select-change" style="visibility: visible;">
+                    <option value="mkt_idx.cur_chng_pct" selected="selected" color="">涨跌幅</option>
+                    <option value="mkt_idx.chng_pct_week" color="_5">近1周涨跌幅</option>
+                    <option value="perf_idx.chng_pct_month" color="_10">近1月涨跌幅</option>
+                    <option value="perf_idx.chng_pct_3month" color="_15">近3月涨跌幅</option>
+                    <option value="perf_idx.chng_pct_6month" color="_20">近6月涨跌幅</option>
+                    <option value="perf_idx.chng_pct_year" color="_25">近1年涨跌幅</option>
+                    <option value="perf_idx.chng_pct_year_sofar" color="_25">今年以来涨跌幅</option>
+                    <option value="mkt_idx.rela_volume" color="_relvol">相对成交量</option>
+                    <option value="mkt_idx.peg" color="_peg">PEG</option>
+                    <option value="mkt_idx.ps" color="_ps">市销率</option>
+                    <option value="mkt_idx.pb" color="_pb">市净率</option>
+                    <option value="mkt_idx.div_rate" color="_div">股息率</option>
+                    <option value="mkt_idx.pe_ttm" color="_pe">市盈率(TTM)</option>
+                    <option value="mkt_idx.fir_fcst_pe" color="_fpe">预测市盈率</option>
+                    <option value="fin_idx.eps_5year" color="_eps5y">EPS增长率(过去5年)</option>
+                    <option value="act_date" color="_earndate">业绩公布日</option>
+                </select>
+            </div>
+            <div class="search">
+                <!--在map.bundle.js中函数93:渲染-->
+            </div>
+        </div>
+        <div class="content-view-map">
+            <div id="map" class="">
+                <!--<div id="mask">
+                    <div>
+                        <img src="">
+                        <span>正在加载</span>
+                    </div>
+                </div>-->
+                <div id="body"></div>
+                <div id="legend"></div>
+                <div id="hover-wrapper"></div>
+            </div>
+            <div class="map_bt clearfix map_bt_min">
+                <div class="map_scale map_scale_min"></div>
+            </div>
+        </div>
+    </div>
+    <div id="modal"></div>
+</div>
+</div>
+<script src="./Chinese Stock Treemap_files/jquery2.2.4.min.js"></script>
+<script src="./Chinese Stock Treemap_files/d3-json.js"></script>
+<script src="./Chinese Stock Treemap_files/com.js"></script>
+<script src="./Chinese Stock Treemap_files/react-with-addons.min.js"></script>
+<script src="./Chinese Stock Treemap_files/d3.js"></script>
+<script src="./Chinese Stock Treemap_files/hammer.min.js"></script>
+<script src="./Chinese Stock Treemap_files/map.bundle.js"></script>
+<script src="./Chinese Stock Treemap_files/map.js"></script>
+<script type="text/javascript">function OnResize(){}window.onresize=OnResize;OnResize();</script>
+</body>
+</html>
