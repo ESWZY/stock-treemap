@@ -8,6 +8,6 @@ Vertical view:
 ![image](https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_4.png)
 ![image](https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_5.png)
 #Feature
-#Installing
-#Building project
+# Installing
+# Building project
 **Step 1:**
