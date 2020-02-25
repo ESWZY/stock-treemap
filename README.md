@@ -34,4 +34,6 @@ You can build this project by yourself. This section describes how to download a
 
 If you have some trouble, please open a new issue.🤭
 
+# Build using Android Studio
+
 **Step 1:**
