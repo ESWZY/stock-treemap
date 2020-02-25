@@ -1345,7 +1345,7 @@
                     type: "get",
                     dataType: "json",
                     scriptCharset: "utf-8",
-                    url: "http://www.z3quant.com/openapi/timedQueryMap.shtml?isContinue=1&" + "&" + new Date().getTime(),
+                    url: url,
                     data: "",
                     success: function(t) {
                         if (t.errCode !== 0 || !t.data) {
