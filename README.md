@@ -11,8 +11,12 @@ Horizontal view:
 
 Vertical view:
 
-![image](https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_4.png)
-![image](https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_5.png)
+
+<div align="center">
+<img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_4.png" width="50%" alt="iage4" >
+  
+<img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_5.png" width="50%" alt="image5" > 
+</div>
 
 # Feature
 
@@ -26,7 +30,7 @@ SIXTEEN indicators for check. 🔍
 
 # Installing
 
-There are not a release version, yet. You can have a try for debug apk [here](https://github.com/ESWZY/stock-treemap/blob/master/apk/app-debug.apk).📱
+You can find the newest release apk [here](https://github.com/ESWZY/stock-treemap/releases). We provide both English and simplified Chinese version.📱
 
 # Build the project
 
