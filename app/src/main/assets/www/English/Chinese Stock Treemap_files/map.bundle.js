@@ -1017,7 +1017,8 @@
                     }
                 },
                 logoBase64: "data:image/png;base64,===",
-                worldMapBgBase64: "data:image/png;base64,==="};
+                worldMapBgBase64: "data:image/png;base64,==="
+            };
         e.exports = l
     },
     1: function(e, t) {

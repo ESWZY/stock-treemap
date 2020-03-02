@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //打开html
-        mWebview.loadUrl("file:///android_asset/www/Chinese Stock Treemap.html");
+        mWebview.loadUrl("file:///android_asset/www/English/Chinese Stock Treemap.html");
         //mWebview.loadUrl("http://www.z3quant.com/dbus/map.shtml");
         //mWebview.loadUrl("http://www.baidu.com/");
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Stock Treemap</title>
+<title>Chinese Stock Treemap</title>
 <meta http-equiv="X-UA-Compatible" content="IE=10">
 <meta name="viewport" content="width=1024"><meta name="description" content="">
 <meta name="keywords" content="">
@@ -42,8 +42,8 @@
         <div class="pull-left view-select">
            <!--  <h2>View</h2> -->
             <a href="./Chinese Stock Treemap_filesmap.shtml" class="is-active map_nav_a">
-            <span class="icon nav_span"></span>刷新</a>
-		</div>
+            <span class="icon nav_span"></span>Refresh</a>
+    </div>
         <div class="zoom pull-right"></div>
         <div class="fr enlarge">
             <span class="currentTime"></span>
@@ -54,31 +54,31 @@
         <div class="sidebar sidebar2">
             <div class="">
                 <ul class="left_nav">
-                    <li class="active"><a>全部A股</a></li>
-                    <li><a>上证A股</a></li>
-                    <li><a>深证A股</a></li>
-                    <li><a>上交所主板</a></li>
-                    <li><a>深交所主板</a></li>
-                    <li><a>中小板</a></li>
-                    <li><a>创业板</a></li>
+                    <li class="active"><a>Total A Shares</a></li>
+                    <li><a>SSE A Shares</a></li>
+                    <li><a>SZSE A Shares</a></li>
+                    <li><a>SSE Main Board</a></li>
+                    <li><a>SZSE Main Board</a></li>
+                    <li><a>SME Board</a></li>
+                    <li><a>GEM</a></li>
                 </ul>
                 <select id="select-change" style="visibility: visible;">
-                    <option value="mkt_idx.cur_chng_pct" selected="selected" color="">涨跌幅</option>
-                    <option value="mkt_idx.chng_pct_week" color="_5">近1周涨跌幅</option>
-                    <option value="perf_idx.chng_pct_month" color="_10">近1月涨跌幅</option>
-                    <option value="perf_idx.chng_pct_3month" color="_15">近3月涨跌幅</option>
-                    <option value="perf_idx.chng_pct_6month" color="_20">近6月涨跌幅</option>
-                    <option value="perf_idx.chng_pct_year" color="_25">近1年涨跌幅</option>
-                    <option value="perf_idx.chng_pct_year_sofar" color="_25">今年以来涨跌幅</option>
-                    <option value="mkt_idx.rela_volume" color="_relvol">相对成交量</option>
+                    <option value="mkt_idx.cur_chng_pct" selected="selected" color="">1 Day Performance</option>
+                    <option value="mkt_idx.chng_pct_week" color="_5">1 Week Performance</option>
+                    <option value="perf_idx.chng_pct_month" color="_10">1 Month Performance</option>
+                    <option value="perf_idx.chng_pct_3month" color="_15">3 Months Performance</option>
+                    <option value="perf_idx.chng_pct_6month" color="_20">6 Months Performance</option>
+                    <option value="perf_idx.chng_pct_year" color="_25">1 Year Performance</option>
+                    <option value="perf_idx.chng_pct_year_sofar" color="_25">Year To Date Performance</option>
+                    <option value="mkt_idx.rela_volume" color="_relvol">Relative Volume</option>
                     <option value="mkt_idx.peg" color="_peg">PEG</option>
-                    <option value="mkt_idx.ps" color="_ps">市销率</option>
-                    <option value="mkt_idx.pb" color="_pb">市净率</option>
-                    <option value="mkt_idx.div_rate" color="_div">股息率</option>
-                    <option value="mkt_idx.pe_ttm" color="_pe">市盈率(TTM)</option>
-                    <option value="mkt_idx.fir_fcst_pe" color="_fpe">预测市盈率</option>
-                    <option value="fin_idx.eps_5year" color="_eps5y">EPS增长率(过去5年)</option>
-                    <option value="act_date" color="_earndate">业绩公布日</option>
+                    <option value="mkt_idx.ps" color="_ps">P/S</option>
+                    <option value="mkt_idx.pb" color="_pb">P/B</option>
+                    <option value="mkt_idx.div_rate" color="_div">Dividend Yield</option>
+                    <option value="mkt_idx.pe_ttm" color="_pe">PE Ratio (TTM)</option>
+                    <option value="mkt_idx.fir_fcst_pe" color="_fpe">Forward P/E</option>
+                    <option value="fin_idx.eps_5year" color="_eps5y">EPS Growth Past 5 Years</option>
+                    <option value="act_date" color="_earndate">Earnings Date</option>
                 </select>
 				<iframe
 					style="margin-top: 25px; margin-left: 2px; margin-bottom:-5px;"
@@ -87,17 +87,11 @@
 				</iframe>
             </div>
             <div class="search">
-                <!--在map.bundle.js中函数93:渲染-->
+                <!--map.bundle.js-->
             </div>
         </div>
         <div class="content-view-map">
             <div id="map" class="">
-                <!--<div id="mask">
-                    <div>
-                        <img src="">
-                        <span>正在加载</span>
-                    </div>
-                </div>-->
                 <div id="body"></div>
                 <div id="legend"></div>
                 <div id="hover-wrapper"></div>
