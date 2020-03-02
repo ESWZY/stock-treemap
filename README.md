@@ -13,9 +13,9 @@ Vertical view:
 
 
 <div align="center">
-<img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_4.png" width="50%" alt="iage4" >
+<img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_4.png" width="49%" alt="iage4" >
   
-<img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_5.png" width="50%" alt="image5" > 
+<img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_5.png" width="49%" alt="image5" > 
 </div>
 
 # Feature
