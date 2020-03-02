@@ -62,20 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mWebview.getSettings().setAllowFileAccessFromFileURLs(true);
         mWebview.getSettings().setAllowUniversalAccessFromFileURLs(true);
 
-
-        //打开html
         mWebview.loadUrl("file:///android_asset/www/English/Chinese Stock Treemap.html");
-        //mWebview.loadUrl("http://www.z3quant.com/dbus/map.shtml");
-        //mWebview.loadUrl("http://www.baidu.com/");
-
-        //设置不用系统浏览器打开,直接显示在当前Webview
-        mWebview.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        });
     }
 
 
