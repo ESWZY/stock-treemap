@@ -22,6 +22,10 @@ Vertical view:
 <img src="https://github.com/ESWZY/stock-treemap/blob/master/snapshot/Screenshot_5.png" width="49%" alt="image5" > 
 </div>
 
+### Timelapse
+
+![timelapse](https://github.com/ESWZY/stock-treemap/blob/master/docs/timelapse_20200729_358x768.gif)
+
 ## Feature
 
 ### Fliter options
